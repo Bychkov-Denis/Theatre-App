@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="WPF.FilmMiniView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="800">
+    <Border BorderBrush="Black" Height="40" BorderThickness="1" Margin="0,2,0,2" >
+        <Grid HorizontalAlignment="Stretch" Name="container" Background="#FF76B900">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Name="film_name" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Film Name</Label>
+            <Label Grid.Column="1" Name="director" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Director</Label>
+            <Label Grid.Column="2" Name="release_date" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Release Date</Label>
+            <Label Grid.Column="3" Name="genre" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Genre</Label>
+
+        </Grid>
+    </Border>
+    
+</UserControl>

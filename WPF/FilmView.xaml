@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="WPF.FilmView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.ColumnSpan="2" Margin="0,3,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>                
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Padding="15,0" Name="back_to_film_list" Grid.Column="0" HorizontalAlignment="Left">Назад</Button>
+            <Button Padding="15,0" Name="edit_film" Grid.Column="2" HorizontalAlignment="Center">Изменить</Button>
+            <Button Padding="15,0" Name="delete_film" Grid.Column="3" HorizontalAlignment="Center">Удалить</Button>
+        </Grid>
+        
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Foreground="white">Название фильма:</Label>
+        <Label Name="film_name" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Foreground="white">Название фильма</Label>
+
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Foreground="white">Жанр фильма:</Label>
+        <Label Name="genre" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Foreground="white">Жанр фильма</Label>
+
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" Foreground="white">Режиссёр фильма:</Label>
+        <Label Name="director" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Foreground="white">Режиссёр фильма</Label>
+
+        <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" Foreground="white">Год выпуска фильма:</Label>
+        <Label Name="release_date" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Foreground="white">Год выпуска фильма</Label>
+
+        <Label Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" Foreground="white">Начало проката фильма:</Label>
+        <Label Name="start_rental" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" Foreground="white">Начало проката</Label>
+
+        <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" Foreground="white">Конец проката фильма:</Label>
+        <Label Name="end_rental" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Foreground="white">Конец проката</Label>
+
+        <Label Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="#ee204d">Сеансы</Label>
+
+        <ScrollViewer Grid.Row="8" Grid.ColumnSpan="2" HorizontalContentAlignment="Stretch" Name="scroll_viewer" VerticalScrollBarVisibility="Hidden" Margin="0,5,0,10">
+            <StackPanel Name="session_list" Orientation="Vertical" HorizontalAlignment="Stretch" CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True"></StackPanel>
+        </ScrollViewer>
+
+        <Button Height="30" Padding="15,0" Name="add_session" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Center">Добавить сеанс</Button>
+
+    </Grid>
+</UserControl>

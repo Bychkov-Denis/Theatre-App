@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPF.EditFilmModal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="EditFilmModal" Height="540" Width="430">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" HorizontalAlignment="Left">Название фильма:</Label>
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="film_name" Grid.Row="1" HorizontalAlignment="Stretch">Название фильма</TextBox>
+        <Label Grid.Row="2" HorizontalAlignment="Left">Жанр фильма:</Label>
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="genre" Grid.Row="3" HorizontalAlignment="Stretch">Жанр фильма</TextBox>
+        <Label Grid.Row="4" HorizontalAlignment="Left">Режиссёр фильма:</Label>
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="director" Grid.Row="5" HorizontalAlignment="Stretch">Режиссёр фильма</TextBox>
+        <Grid Grid.Row="6" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Left">Год выпуска фильма:</Label>
+            <Label Name="release_date_error" Grid.Column="1" Foreground="Red"></Label>
+        </Grid>
+
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="release_date" Grid.Row="7" HorizontalAlignment="Stretch"></TextBox>
+        <Label Grid.Row="8" HorizontalAlignment="Left">Начало проката фильма:</Label>
+        <DatePicker VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="start_rental" Grid.Row="9" HorizontalAlignment="Stretch"></DatePicker>
+        <Label Grid.Row="10" HorizontalAlignment="Left">Окончание проката фильма:</Label>
+        <DatePicker VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="end_rental" Grid.Row="11" HorizontalAlignment="Stretch"></DatePicker>
+        <Button Name="edit_film" Grid.Row="12" VerticalAlignment="Center" Padding="15, 10">Сохранить изменения</Button>
+    </Grid>
+</Window>
